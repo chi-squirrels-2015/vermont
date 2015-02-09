@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>We have the following</h2>
+      <ul>
+        <% Gun.select(:model).distinct.each do |gun|%>
+        <li><%= Gun.where(model: gun.model).size %></li>
+        <li><%=gun.model%></li>
+        <%end%>
+      </ul>
+
+
+  <form action="" method="">
+    <input type="text">
+  </form>
+</div>
